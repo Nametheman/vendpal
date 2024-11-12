@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Design Team",
+    "description": "But now you can use Material's dynamic color feature to automatically generate accessible colors assigned to each number.",
+    "department": 1,
+    "color": "#7DC9FF",
+    "unit": 1
+  },
+  {
+    "name": "Product Team",
+    "description": "But now you can use Material's dynamic color feature to automatically generate accessible colors assigned to each number.",
+    "department": 1,
+    "color": "#FFE756",
+    "unit": 2
+  },
+  {
+    "name": "Development Team",
+    "description": "But now you can use Material's dynamic color feature to automatically generate accessible colors assigned to each number.",
+    "department": 3,
+    "color": "#CA2A56",
+    "unit": 2
+  }
+]
