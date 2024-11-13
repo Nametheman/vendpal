@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -54,17 +54,13 @@ const CreateForm = ({ open, setOpen }: Props) => {
     description: "",
     department: 0,
     unit: 0,
-    color: "",
+    color: generateRandomColor(),
   };
 
   const createDepartment = async (values: CreateDepartmentType) => {
     mutate(values);
   };
 
-  useEffect(() => {
-    const color = generateRandomColor();
-    setColor(color);
-  }, []);
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent className="sm:max-w-[425px]">
@@ -80,7 +76,6 @@ const CreateForm = ({ open, setOpen }: Props) => {
           onSubmit={createDepartment}
         >
           {({ errors, touched, values, handleChange, setFieldValue }) => {
-            setFieldValue("color", color);
             return (
               <Form>
                 <div className="grid gap-4 py-4">
