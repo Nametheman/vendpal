@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import {
   Dialog,
   DialogContent,
@@ -26,7 +26,6 @@ type Props = {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 const CreateForm = ({ open, setOpen }: Props) => {
-  const [color, setColor] = useState("");
   const { toast } = useToast();
   const { addDepartment } = useDepartmentStore();
   const { mutate, isPending } = useMutation({
@@ -75,7 +74,7 @@ const CreateForm = ({ open, setOpen }: Props) => {
           validationSchema={CreateDepartmentSchema}
           onSubmit={createDepartment}
         >
-          {({ errors, touched, values, handleChange, setFieldValue }) => {
+          {({ errors, touched, values, handleChange }) => {
             return (
               <Form>
                 <div className="grid gap-4 py-4">
